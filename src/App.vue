@@ -1,13 +1,18 @@
 <template>
   <div id="app">
+    <Navigation />
     <router-view />
   </div>
 </template>
 
 <script>
+  import Navigation from './components/Navigation'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Navigation
+  }
 }
 </script>
 
@@ -24,6 +29,7 @@ export default {
     width: 100vw;
     overflow: hidden;
     position: fixed;
+    font-family: 'Inter', sans-serif;
   }
 
   #app {
@@ -32,9 +38,6 @@ export default {
     background-color: #001E32;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow-x: hidden;
     overflow-y: hidden;
   }
