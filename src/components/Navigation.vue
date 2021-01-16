@@ -21,6 +21,7 @@
     }
 
     .link {
+        display: inline-block;
         color: @mint;
         text-decoration: none;
         margin: 20px;
@@ -29,6 +30,11 @@
         padding: 20px;
         box-shadow: 6px 10px 0 0 white;
         transition: all 200ms ease-in-out;
+
+        &:hover {
+            transform: translate(6px, 10px);
+            box-shadow: none;
+        }
     }
 
 
