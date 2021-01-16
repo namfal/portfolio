@@ -27,19 +27,20 @@
         margin: 20px;
         font-size: 24px;
         border: 2px solid white;
-        padding: 20px;
-        box-shadow: 6px 6px 0 0 white;
+        padding: 10px;
+        box-shadow: 4px 4px 0 0 white;
         transition: all 200ms ease-in-out;
         user-select: none;
 
         &:hover {
-            box-shadow: 0 0 0 6px @bright-turquoise;
+            box-shadow: 0 0 0 4px @bright-turquoise;
         }
     }
 
     .router-link-active{
         color: @bright-turquoise;
-        box-shadow: 0 0 0 6px @bright-turquoise;
+        border-color: @bright-turquoise;
+        box-shadow: 0 0 0 4px @bright-turquoise;
     }
 
 </style>
