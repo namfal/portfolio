@@ -1,6 +1,6 @@
 <template>
     <nav class="navigation">
-        <router-link :to="{ name: 'Home' }" class="link">Home</router-link>
+        <router-link :to="{ name: 'Home' }" exact class="link">Home</router-link>
         <router-link :to="{ name: 'Resume' }" class="link">Resume</router-link>
     </nav>
 </template>
@@ -22,21 +22,23 @@
 
     .link {
         display: inline-block;
-        color: @mint;
+        color: white;
         text-decoration: none;
         margin: 20px;
         font-size: 24px;
         border: 2px solid white;
         padding: 20px;
-        box-shadow: 6px 10px 0 0 white;
+        box-shadow: 6px 6px 0 0 white;
         transition: all 200ms ease-in-out;
 
         &:hover {
-            transform: translate(6px, 10px);
-            box-shadow: none;
+            box-shadow: 0 0 0 6px @bright-turquoise;
         }
     }
 
-
+    .router-link-active{
+        color: @bright-turquoise;
+        box-shadow: 0 0 0 6px @bright-turquoise;
+    }
 
 </style>
