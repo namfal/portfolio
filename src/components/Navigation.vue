@@ -30,6 +30,7 @@
         padding: 20px;
         box-shadow: 6px 6px 0 0 white;
         transition: all 200ms ease-in-out;
+        user-select: none;
 
         &:hover {
             box-shadow: 0 0 0 6px @bright-turquoise;
