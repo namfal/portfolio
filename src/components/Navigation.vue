@@ -18,6 +18,7 @@
         position: absolute;
         top: 50px;
         right: 50px;
+        z-index: 1;
     }
 
     .link {
@@ -31,6 +32,7 @@
         box-shadow: 4px 4px 0 0 white;
         transition: all 200ms ease-in-out;
         user-select: none;
+        background-color: @midnight;
 
         &:hover {
             box-shadow: 0 0 0 4px @bright-turquoise;
