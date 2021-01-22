@@ -7,6 +7,8 @@ Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
+document.title = "Nami Falhan | Portfolio"
+
 new Vue({
   router,
   render: h => h(App),
