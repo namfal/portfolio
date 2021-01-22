@@ -2,6 +2,7 @@
     <nav class="navigation">
         <router-link :to="{ name: 'Home' }" exact class="link">Home</router-link>
         <router-link :to="{ name: 'Resume' }" class="link">Resume</router-link>
+        <router-link :to="{ name: 'Canvas' }" class="link">Canvas</router-link>
     </nav>
 </template>
 
