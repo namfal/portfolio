@@ -5,14 +5,14 @@
 </template>
 
 <script>
-    import Canvas from '../components/Canvas.vue'
+import Canvas from '../components/Canvas.vue'
 
-    export default {
-        name: 'TempCanvas',
-        components: {
-            Canvas
-        }
-    }
+export default {
+	name: 'TempCanvas',
+	components: {
+		Canvas
+	}
+}
 </script>
 
 <style scoped>

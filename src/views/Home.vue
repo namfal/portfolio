@@ -5,14 +5,14 @@
 </template>
 
 <script>
-    import Circles from '../components/Circles.vue'
+import Circles from '../components/Circles.vue'
 
-    export default {
-        name: "Home",
-        components: {
-            Circles
-        }
-    }
+export default {
+	name: "Home",
+	components: {
+		Circles
+	}
+}
 </script>
 
 <style scoped lang="less">
