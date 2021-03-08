@@ -22,6 +22,9 @@
 
             this.redrawPatterns()
         },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.onResize);
+        },
         methods: {
             getRandomNumber (lowerLimit, upperLimit) {
                 let min = Math.ceil(lowerLimit)
