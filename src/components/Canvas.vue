@@ -65,7 +65,14 @@
                     let rotation = this.getRandomNumber(0,360)
 
                     let { translateX, translateY } = this.getTranslationCoordinates(x, y)
-                    let animation = Raphael.animation({transform: `...T${translateX},${translateY}`}, 600000, 'linear')
+                    let animation = Raphael.animation(
+                        {
+                            0.5: {transform: `...T${translateX},${translateY}`},
+                            1: {transform: `...T${-translateX},${-translateY}`}
+                        },
+                        this.getRandomNumber(200000,600000),
+                        'linear')
+                        .repeat(Infinity)
 
                     this.paper.path(path)
                         .attr({
