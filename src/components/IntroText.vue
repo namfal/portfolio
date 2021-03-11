@@ -1,6 +1,7 @@
 <template>
 	<div class="bio-text-container">
 		<div class="circle"></div>
+		<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
 		<p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus viverra vitae congue eu consequat ac. Lectus sit amet est placerat in egestas erat. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada.</p>
 	</div>
 </template>
@@ -30,6 +31,7 @@ export default {
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
 		box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
+		z-index: 2;
     }
 
 	.bio {
@@ -38,5 +40,15 @@ export default {
 		font-size: 1.4em;
 		z-index: 3;
 		text-align: center;
+	}
+
+	.pic {
+		height: 350px;
+		clip-path: circle(40%);
+		position: absolute;
+		top: -150px;
+		left: -150px;
+		transform: scaleX(-1);
+		z-index: 1;
 	}
 </style>
