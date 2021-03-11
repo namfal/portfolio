@@ -58,7 +58,7 @@ export default {
 		},
 		drawPatterns () {
 			const colors = ['#fff', '#42aab4', '#bd7a96', '#7896c5', '#cb8f5d']
-			const count = Math.ceil(Math.max(this.width, this.height) / 30)
+			const count = Math.ceil(Math.max(this.width, this.height) / 20)
 
 			for (let i = 0; i < count; i++) {
 				const path = svgs[this.getRandomNumber(0, svgs.length - 1)]
