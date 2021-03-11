@@ -45,4 +45,17 @@ export default {
 		transform: scaleX(-1);
 		z-index: 2;
 	}
+
+	@media screen and (max-width: 900px){
+		.bio {
+			font-size: 1.2em;
+		}
+
+		.pic {
+			position: relative;
+			top: unset;
+			left: unset;
+			height: 250px;
+		}
+	}
 </style>
