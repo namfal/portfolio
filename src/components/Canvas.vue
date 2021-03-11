@@ -87,7 +87,6 @@ export default {
 					.scale(0.1, 0.1, 0, 0)
 					.rotate(rotation)
 					.animate(animation)
-					.glow({color: color, width: 5, offsetx: 6, offsety: 6, opacity: 0.2})
 					.animate(animation)
 			}
 		},
