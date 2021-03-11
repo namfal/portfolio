@@ -39,9 +39,9 @@
 </template>
 
 <script>
-	export default {
-		name: "Circles.svg"
-	}
+export default {
+	name: "Circles.svg"
+}
 </script>
 
 <style scoped lang="less">
