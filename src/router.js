@@ -1,7 +1,6 @@
 import VueRouter from 'vue-router'
 import Home from './views/Home'
 import Resume from './views/Resume'
-import TempCanvas from './views/TempCanvas'
 
 const routes = [
 	{
@@ -13,11 +12,6 @@ const routes = [
 		path: '/resume',
 		name: 'Resume',
 		component: Resume
-	},
-	{
-		path: '/canvas',
-		name: 'Canvas',
-		component: TempCanvas
 	}
 ]
 
