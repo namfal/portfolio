@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <Navigation />
-    <router-view />
-  </div>
+	<div id="app">
+		<Navigation />
+		<router-view />
+	</div>
 </template>
 
 <script>
@@ -17,30 +17,30 @@ export default {
 </script>
 
 <style>
-  * {
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-  }
+	* {
+		border: none;
+		outline: none;
+		padding: 0;
+		margin: 0;
+	}
 
-  html, body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed;
-    font-family: 'Inter', sans-serif;
-  }
+	html, body {
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+		position: fixed;
+		font-family: 'Inter', sans-serif;
+	}
 
-  #app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #001E32;
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+	#app {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		background-color: #001E32;
+		height: 100vh;
+		width: 100vw;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
 
 
 </style>

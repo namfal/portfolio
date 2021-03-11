@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <Canvas></Canvas>
-    </div>
+	<div class="container">
+		<Canvas></Canvas>
+	</div>
 </template>
 
 <script>

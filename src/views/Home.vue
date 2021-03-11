@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <Circles></Circles>
-    </div>
+	<div class="container">
+		<Circles></Circles>
+	</div>
 </template>
 
 <script>
@@ -16,12 +16,12 @@ export default {
 </script>
 
 <style scoped lang="less">
-    .container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+	.container {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 </style>
