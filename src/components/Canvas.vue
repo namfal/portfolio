@@ -87,7 +87,6 @@ export default {
 					.scale(0.1, 0.1, 0, 0)
 					.rotate(rotation)
 					.animate(animation)
-					.animate(animation)
 			}
 		},
 		redrawPatterns () {
