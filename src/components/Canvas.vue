@@ -6,6 +6,7 @@
 <script>
 import Raphael from '../libs/raphael.js'
 import svgs from '../assets/svgs.js'
+import { throttle } from 'lodash'
 
 export default {
 	name: 'Canvas',
@@ -17,7 +18,7 @@ export default {
 	},
 	mounted () {
 		this.$nextTick(() => {
-			window.addEventListener('resize', this.onResize)
+			window.addEventListener('resize', throttle(this.onResize, 500))
 		})
 
 		this.redrawPatterns()
