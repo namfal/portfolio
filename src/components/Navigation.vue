@@ -17,7 +17,7 @@ export default {
 
 	nav {
 		position: absolute;
-		top: 50px;
+		top: 10px;
 		right: 50px;
 		z-index: 1;
 	}
@@ -26,10 +26,10 @@ export default {
 		display: inline-block;
 		color: white;
 		text-decoration: none;
-		margin: 20px;
-		font-size: 24px;
+		margin: 1em;
+		font-size: 1.5em;
 		border: 2px solid white;
-		padding: 10px;
+		padding: 0.5em;
 		box-shadow: 4px 4px 0 0 white;
 		transition: all 200ms ease-in-out;
 		user-select: none;
@@ -44,6 +44,12 @@ export default {
 		color: @bright-turquoise;
 		border-color: @bright-turquoise;
 		box-shadow: 0 0 0 4px @bright-turquoise;
+	}
+
+	@media screen and (max-width: 900px){
+		.link {
+			font-size: 1.2em;
+		}
 	}
 
 </style>
