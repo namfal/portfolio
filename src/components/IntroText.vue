@@ -14,7 +14,7 @@ export default {
 <style scoped lang="less">
 	.bio-text-container {
 		height: 50vh;
-		width: 50vh;
+		width: 50vw;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -24,7 +24,7 @@ export default {
 
 	.bio {
 		border-radius: 20px;
-		width: 40vh;
+		width: 50vw;
 		font-size: 1.4em;
 		padding: 2em;
 		line-height: 1.3em;
@@ -47,16 +47,22 @@ export default {
 	}
 
 	@media screen and (max-width: 900px){
+		.bio-text-container {
+			height: 85vh;
+			justify-content: space-around;
+		}
+
 		.bio {
 			font-size: 1.2em;
 			padding: 1em;
+			overflow: scroll;
 		}
 
 		.pic {
 			position: relative;
 			top: unset;
 			left: unset;
-			height: 250px;
+			height: 40vw;
 		}
 	}
 </style>
