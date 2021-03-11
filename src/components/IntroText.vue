@@ -49,6 +49,7 @@ export default {
 	@media screen and (max-width: 900px){
 		.bio {
 			font-size: 1.2em;
+			padding: 1em;
 		}
 
 		.pic {
