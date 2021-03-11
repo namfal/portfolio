@@ -1,17 +1,11 @@
 <template>
 	<div class="container">
-		<Circles></Circles>
 	</div>
 </template>
 
 <script>
-import Circles from '../components/Circles.vue'
-
 export default {
-	name: "Home",
-	components: {
-		Circles
-	}
+	name: "Home"
 }
 </script>
 
