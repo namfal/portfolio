@@ -1,30 +1,44 @@
 <template>
-	<div class="container">
+	<div class="container-home">
 		<Canvas></Canvas>
-		<IntroText />
+		<Intro />
+		<div class="footer"></div>
 	</div>
 </template>
 
 <script>
 import Canvas from '../components/Canvas'
-import IntroText from '../components/IntroText'
+import Intro from '../components/Intro'
 
 export default {
 	name: "Home",
 	components: {
 		Canvas,
-		IntroText
+		Intro
 	}
 }
 </script>
 
 <style scoped lang="less">
-	.container {
-		height: 100vh;
+	.container-home {
+		height: calc(100vh - 48px - 20px);
 		width: 100vw;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		flex-direction: column;
+	}
+
+	.footer {
+		height: 100px;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2;
+	}
+
+	@media screen and (max-width: 370px) {
+		.container-home {
+			height: 100vh;
+		}
 	}
 </style>

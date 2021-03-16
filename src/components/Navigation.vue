@@ -1,5 +1,5 @@
 <template>
-	<nav class="navigation">
+	<nav>
 		<div class="hamburger" @click="expanded = !expanded">
 			<div></div>
 			<div></div>
@@ -27,8 +27,8 @@ export default {
 
 	nav {
 		width: 100%;
-		position: absolute;
-		top: 20px;
+		position: relative;
+		margin-top: 20px;
 		z-index: 3;
 		display: flex;
 		flex-direction: row;
@@ -85,6 +85,8 @@ export default {
 		nav {
 			flex-direction: column;
 			align-items: flex-end;
+			position: absolute;
+			z-index: 4;
 		}
 
 		.hamburger {
@@ -100,5 +102,4 @@ export default {
 			transform: translateX(0px);
 		}
 	}
-
 </style>
