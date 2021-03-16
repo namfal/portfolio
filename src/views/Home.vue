@@ -1,10 +1,12 @@
 <template>
 	<div class="container-home">
 		<Canvas :animation="animationPaused" :darkTheme="darkTheme"></Canvas>
-		<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
-		<p class="bio">
-			When I was a toddler, I took apart my parents’ bedside lamp and was tinkering with it. My questionable choice for toys aside, I was born to take things apart and put them back together (failed attempts count too!). Now, I tinker with web apps instead and my main tool is JS. I love React and Vue and I am looking for a small-mid sized company to code remotely!
-		</p>
+		<div class="pic"></div>
+		<div class="text">
+			<p>
+				When I was a toddler, I took apart my parents’ bedside lamp and was tinkering with it. My questionable choice for toys aside, I was born to take things apart and put them back together (failed attempts count too!). Now, I tinker with web apps instead and my main tool is JS. I love React and Vue and I am looking for a small-mid sized company to code remotely!
+			</p>
+		</div>
 		</div>
 </template>
 
@@ -30,54 +32,57 @@ export default {
 		flex-direction: column;
 	}
 
-	img, p {
-		display: none;
+	.pic {
+		height: 35vmin;
+		width: 35vmin;
+		max-height: 250px;
+		max-width: 250px;
+		z-index: 2;
+		background-image: url("../assets/nami-pic.jpeg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		background-position: center;
 	}
-	/*
-	.bio {
-		max-width: 900px;
-		margin: 0 0.7em;
-		border-radius: 20px;
-		overflow: scroll;
-		font-size: 1.4em;
+
+	.text {
+		width: 90%;
+		max-height: 40vmin;
+		max-width: 700px;
+		font-size: 1.6em;
+		z-index: 2;
+		margin: 0.8em;
 		padding: 0.8em;
+		overflow: scroll;
 		line-height: 1.3em;
-		z-index: 3;
-		text-align: left;
+		border-radius: 20px;
+		box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
 		background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
-		box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
 	}
 
-	.pic {
-		height: 30%;
-		max-height: 350px;
-		min-height: 150px;
-		clip-path: circle(40%);
-		z-index: 2;
-	}
+	@media screen and (max-height: 600px) {
+		.pic {
+			height: 14vmin;
+			width: 14vmin;
+		}
 
-	@media screen and (max-width: 700px) {
-		.bio {
-			font-size: 1.2em;
+		.text {
+			font-size: 1.4em;
+			max-height: 33vmin;
 		}
 	}
 
-	@media screen and (max-height: 700px) {
-		.container-home {
-			justify-content: center;
-		}
-
+	@media screen and (max-height: 315px) {
 		.pic {
 			display: none;
 		}
 	}
 
-	@media screen and (max-height: 400px) {
-		.bio {
-			height: 80px;
+	@media screen and (max-width: 300px) {
+		.text {
+			font-size: 1.2em;
 		}
 	}
-	*/
 </style>
