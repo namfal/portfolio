@@ -27,7 +27,7 @@ export default {
 
 	nav {
 		position: relative;
-		margin-top: 20px;
+		margin: 20px 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
