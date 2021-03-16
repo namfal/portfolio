@@ -41,6 +41,4 @@ export default {
 		overflow-x: hidden;
 		overflow-y: hidden;
 	}
-
-
 </style>
