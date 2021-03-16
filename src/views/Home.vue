@@ -74,15 +74,15 @@ export default {
 		}
 	}
 
-	@media screen and (max-height: 315px) {
-		.pic {
-			display: none;
+	@media screen and (max-width: 420px) {
+		.text {
+			font-size: 1.2em;
 		}
 	}
 
-	@media screen and (max-width: 300px) {
-		.text {
-			font-size: 1.2em;
+	@media screen and (max-height: 315px) {
+		.pic {
+			display: none;
 		}
 	}
 </style>
