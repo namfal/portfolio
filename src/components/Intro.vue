@@ -15,15 +15,14 @@ export default {
 
 <style scoped lang="less">
 	.intro-container {
-		width: 70%;
-		height: 80%;
+		width: 80vw;
+		height: 75vh;
 		max-width: 800px;
-		max-height: 600px;
+		max-height: 700px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		position: relative;
 	}
 
 	.bio {
@@ -38,33 +37,19 @@ export default {
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
 		box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
-		margin-top: 300px;
 	}
 
 	.pic {
-		height: 300px;
+		height: 50vw;
+		max-height: 350px;
 		min-height: 175px;
 		clip-path: circle(40%);
-		position: absolute;
-		top: 100px;
-		left: -150px;
-		transform: scaleX(-1);
 		z-index: 2;
 	}
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 700px) {
 		.bio {
-			font-size: 1.2em;
-			margin-top: 0;
 			padding: 1em;
-		}
-
-		.pic {
-			position: relative;
-			top: unset;
-			left: unset;
-			height: 40vw;
-			align-self: unset;
 		}
 	}
 </style>
