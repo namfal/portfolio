@@ -13,8 +13,8 @@
 				<unicon name="play"/>
 			</div>
 			<div class="links">
-				<unicon name="linkedin"/>
-				<unicon name="github"/>
+				<a href="https://www.linkedin.com/in/namifalhan/" target="_blank" title="LinkedIn"><unicon name="linkedin"/></a>
+				<a href="http://github.com/namfal" target="_blank" title="GitHub"><unicon name="github"/></a>
 			</div>
 			<div class="theme">
 				<unicon name="moon"/>
