@@ -1,25 +1,11 @@
 <template>
 	<div class="container-home">
-		<Canvas :animation="paused" :darkTheme="darkTheme"></Canvas>
+		<Canvas :animation="animationPaused" :darkTheme="darkTheme"></Canvas>
 		<div class="intro">
 			<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
 			<p class="bio">
 				When I was a toddler, I took apart my parents’ bedside lamp and was tinkering with it. My questionable choice for toys aside, I was born to take things apart and put them back together (failed attempts count too!). Now, I tinker with web apps instead and my main tool is JS. I love React and Vue and I am looking for a small-mid sized company to code remotely!
 			</p>
-		</div>
-		<div class="footer">
-			<div class="controls" @click="paused = !paused">
-				<unicon name="play" v-if="paused"/>
-				<unicon name="pause" v-else/>
-			</div>
-			<div class="links">
-				<a href="https://www.linkedin.com/in/namifalhan/" target="_blank" title="LinkedIn"><unicon name="linkedin"/></a>
-				<a href="http://github.com/namfal" target="_blank" title="GitHub"><unicon name="github"/></a>
-			</div>
-			<div class="theme" @click="darkTheme = !darkTheme">
-				<unicon name="moon" v-if="darkTheme"/>
-				<unicon name="sun" v-else/>
-			</div>
 		</div>
 	</div>
 </template>
@@ -29,27 +15,16 @@ import Canvas from '../components/Canvas'
 
 export default {
 	name: "Home",
+	props: ['animationPaused', 'darkTheme'],
 	components: {
 		Canvas
-	},
-	data () {
-		return {
-			paused: false,
-			darkTheme: true
-		}
-	},
-	watch: {
-		darkTheme: function () {
-			const className = this.darkTheme ? 'dark' : 'light'
-			document.getElementsByTagName('body')[0].className = className
-		}
 	}
 }
 </script>
 
 <style scoped lang="less">
 	.container-home {
-		height: calc(100vh - 48px - 20px);
+		height: calc(100vh - 48px - 20px - 100px);
 		width: 100vw;
 		display: flex;
 		justify-content: space-between;
@@ -88,17 +63,6 @@ export default {
 		min-height: 175px;
 		clip-path: circle(40%);
 		z-index: 2;
-	}
-
-	.footer {
-		height: 100px;
-		width: 100%;
-		background-color: #fff;
-		z-index: 2;
-		display: flex;
-		align-items: center;
-		flex-direction: row;
-		justify-content: space-between;
 	}
 
 	@media screen and (max-width: 700px) {

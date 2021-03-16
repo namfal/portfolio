@@ -1,17 +1,41 @@
 <template>
 	<div id="app">
 		<Navigation />
-		<router-view />
+		<main>
+			<router-view :animationPaused="paused" :darkTheme="darkTheme"/>
+		</main>
+		<Footer @toggle-animation="toggleAnimation" @toggle-theme="toggleTheme" :animationPaused="paused" :darkTheme="darkTheme"/>
 	</div>
 </template>
 
 <script>
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
 export default {
 	name: 'App',
 	components: {
-		Navigation
+		Navigation,
+		Footer
+	},
+	data () {
+		return {
+			paused: false,
+			darkTheme: true
+		}
+	},
+	watch: {
+		darkTheme: function () {
+			document.getElementsByTagName('body')[0].className = this.darkTheme ? 'dark' : 'light'
+		}
+	},
+	methods: {
+		toggleAnimation: function () {
+			this.paused = !this.paused
+		},
+		toggleTheme: function () {
+			this.darkTheme = !this.darkTheme
+		}
 	}
 }
 </script>
