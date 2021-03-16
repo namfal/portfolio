@@ -1,5 +1,5 @@
 <template>
-	<div ref="container" class="container">
+	<div ref="container" class="container-canvas">
 	</div>
 </template>
 
@@ -100,7 +100,7 @@ export default {
 </script>
 
 <style scoped>
-	.container {
+	.container-canvas {
 		width: 100vw;
 		height: 100vh;
 		position: absolute;
