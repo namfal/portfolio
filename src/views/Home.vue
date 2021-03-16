@@ -1,6 +1,6 @@
 <template>
 	<div class="container-home">
-		<Canvas></Canvas>
+		<Canvas :animation="paused"></Canvas>
 		<div class="intro">
 			<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
 			<p class="bio">

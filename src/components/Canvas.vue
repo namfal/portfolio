@@ -10,6 +10,9 @@ import { throttle } from 'lodash'
 
 export default {
 	name: 'Canvas',
+	props: {
+		animation: Boolean
+	},
 	data () {
 		return {
 			width: window.innerWidth,
@@ -25,6 +28,12 @@ export default {
 	},
 	beforeDestroy() {
 		window.removeEventListener('resize', this.onResize)
+	},
+	watch: {
+		animation: function () {
+			if (this.animation) this.paperSet.pause()
+			else if (!this.animation) this.paperSet.resume()
+		}
 	},
 	methods: {
 		getRandomNumber (lowerLimit, upperLimit) {
@@ -60,7 +69,7 @@ export default {
 		drawPatterns () {
 			const colors = ['#fff', '#42aab4', '#bd7a96', '#7896c5', '#cb8f5d']
 			const count = Math.ceil(Math.max(this.width, this.height) / 20)
-
+			this.paper.setStart()
 			for (let i = 0; i < count; i++) {
 				const path = svgs[this.getRandomNumber(0, svgs.length - 1)]
 				const color = colors[this.getRandomNumber(0, colors.length - 1)]
@@ -89,6 +98,7 @@ export default {
 					.rotate(rotation)
 					.animate(animation)
 			}
+			this.paperSet = this.paper.setFinish()
 		},
 		redrawPatterns () {
 			if (this.paper) this.paper.remove()
