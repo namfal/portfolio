@@ -24,11 +24,7 @@ export default {
 
 <style scoped>
 	footer {
-		height: 100px;
-		width: 100%;
 		background-color: #fff;
-		position: relative;
-		z-index: 2;
 		display: flex;
 		align-items: center;
 		flex-direction: row;

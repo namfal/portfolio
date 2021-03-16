@@ -46,6 +46,7 @@ export default {
 		outline: none;
 		padding: 0;
 		margin: 0;
+		box-sizing: border-box;
 	}
 
 	html, body {
@@ -64,6 +65,27 @@ export default {
 		width: 100vw;
 		overflow-x: hidden;
 		overflow-y: hidden;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	nav {
+		flex: 0 0 0;
+		width: 100%;
+		z-index: 2;
+	}
+
+	footer {
+		flex: 0 0 70px;
+		width: 100%;
+		z-index: 2;
+	}
+
+	main {
+		flex: 1 1 auto;
+		width: 100%;
 	}
 
 	body.dark #app {

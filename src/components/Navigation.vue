@@ -26,10 +26,8 @@ export default {
 	@import '../styles/common';
 
 	nav {
-		width: 100%;
 		position: relative;
 		margin-top: 20px;
-		z-index: 3;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
@@ -64,7 +62,7 @@ export default {
 
 		div {
 			width: 40px;
-			height: 6px;
+			height: 5px;
 			margin: 10px;
 			background-color: white;
 			border-radius: 8px;
@@ -86,7 +84,8 @@ export default {
 			flex-direction: column;
 			align-items: flex-end;
 			position: absolute;
-			z-index: 4;
+			z-index: 100;
+			margin-top: 0;
 		}
 
 		.hamburger {

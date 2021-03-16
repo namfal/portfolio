@@ -1,13 +1,11 @@
 <template>
 	<div class="container-home">
 		<Canvas :animation="animationPaused" :darkTheme="darkTheme"></Canvas>
-		<div class="intro">
-			<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
-			<p class="bio">
-				When I was a toddler, I took apart my parents’ bedside lamp and was tinkering with it. My questionable choice for toys aside, I was born to take things apart and put them back together (failed attempts count too!). Now, I tinker with web apps instead and my main tool is JS. I love React and Vue and I am looking for a small-mid sized company to code remotely!
-			</p>
+		<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
+		<p class="bio">
+			When I was a toddler, I took apart my parents’ bedside lamp and was tinkering with it. My questionable choice for toys aside, I was born to take things apart and put them back together (failed attempts count too!). Now, I tinker with web apps instead and my main tool is JS. I love React and Vue and I am looking for a small-mid sized company to code remotely!
+		</p>
 		</div>
-	</div>
 </template>
 
 <script>
@@ -24,30 +22,25 @@ export default {
 
 <style scoped lang="less">
 	.container-home {
-		height: calc(100vh - 48px - 20px - 100px);
-		width: 100vw;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-direction: column;
-	}
-
-	.intro {
-		width: 80vw;
-		height: 75vh;
-		max-width: 800px;
-		max-height: 700px;
+		height: 100%;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 	}
 
+	img, p {
+		display: none;
+	}
+	/*
 	.bio {
+		max-width: 900px;
+		margin: 0 0.7em;
 		border-radius: 20px;
 		overflow: scroll;
 		font-size: 1.4em;
-		padding: 2em;
+		padding: 0.8em;
 		line-height: 1.3em;
 		z-index: 3;
 		text-align: left;
@@ -58,22 +51,33 @@ export default {
 	}
 
 	.pic {
-		height: 50vw;
+		height: 30%;
 		max-height: 350px;
-		min-height: 175px;
+		min-height: 150px;
 		clip-path: circle(40%);
 		z-index: 2;
 	}
 
 	@media screen and (max-width: 700px) {
 		.bio {
-			padding: 1em;
+			font-size: 1.2em;
 		}
 	}
 
-	@media screen and (max-width: 370px) {
+	@media screen and (max-height: 700px) {
 		.container-home {
-			height: 100vh;
+			justify-content: center;
+		}
+
+		.pic {
+			display: none;
 		}
 	}
+
+	@media screen and (max-height: 400px) {
+		.bio {
+			height: 80px;
+		}
+	}
+	*/
 </style>
