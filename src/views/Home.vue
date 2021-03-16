@@ -1,6 +1,6 @@
 <template>
 	<div class="container-home">
-		<Canvas :animation="paused"></Canvas>
+		<Canvas :animation="paused" :darkTheme="darkTheme"></Canvas>
 		<div class="intro">
 			<img class="pic" src="../assets/nami-pic.jpeg" alt="profile-picture">
 			<p class="bio">
@@ -36,6 +36,12 @@ export default {
 		return {
 			paused: false,
 			darkTheme: true
+		}
+	},
+	watch: {
+		darkTheme: function () {
+			const className = this.darkTheme ? 'dark' : 'light'
+			document.getElementsByTagName('body')[0].className = className
 		}
 	}
 }

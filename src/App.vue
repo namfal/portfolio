@@ -41,4 +41,13 @@ export default {
 		overflow-x: hidden;
 		overflow-y: hidden;
 	}
+
+	body.dark #app {
+		background-color: #001E32;
+	}
+
+	body.light #app {
+		background-color: #d2ecff;
+	}
+
 </style>

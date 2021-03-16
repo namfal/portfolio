@@ -11,7 +11,8 @@ import { throttle } from 'lodash'
 export default {
 	name: 'Canvas',
 	props: {
-		animation: Boolean
+		animation: Boolean,
+		darkTheme: Boolean
 	},
 	data () {
 		return {
@@ -33,6 +34,11 @@ export default {
 		animation: function () {
 			if (this.animation) this.paperSet.pause()
 			else if (!this.animation) this.paperSet.resume()
+		},
+		darkTheme: function () {
+			this.paperSet.attr({
+				fill: this.darkTheme ? '#001E32' : '#d2ecff'
+			})
 		}
 	},
 	methods: {
