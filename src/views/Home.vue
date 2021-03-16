@@ -8,7 +8,18 @@
 			</p>
 		</div>
 		<div class="footer">
-
+			<div class="controls">
+				<unicon name="pause"/>
+				<unicon name="play"/>
+			</div>
+			<div class="links">
+				<unicon name="linkedin"/>
+				<unicon name="github"/>
+			</div>
+			<div class="theme">
+				<unicon name="moon"/>
+				<unicon name="sun"/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -72,6 +83,10 @@ export default {
 		width: 100%;
 		background-color: #fff;
 		z-index: 2;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	@media screen and (max-width: 700px) {
