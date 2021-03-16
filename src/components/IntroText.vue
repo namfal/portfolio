@@ -13,8 +13,10 @@ export default {
 
 <style scoped lang="less">
 	.bio-text-container {
-		height: 50vh;
+		height: 40vh;
 		width: 50vw;
+		max-width: 600px;
+		max-height: 500px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -24,7 +26,7 @@ export default {
 
 	.bio {
 		border-radius: 20px;
-		width: 50vw;
+		width: 100%;
 		font-size: 1.4em;
 		padding: 2em;
 		line-height: 1.3em;
