@@ -8,17 +8,17 @@
 			</p>
 		</div>
 		<div class="footer">
-			<div class="controls">
-				<unicon name="pause"/>
-				<unicon name="play"/>
+			<div class="controls" @click="paused = !paused">
+				<unicon name="play" v-if="paused"/>
+				<unicon name="pause" v-else/>
 			</div>
 			<div class="links">
 				<a href="https://www.linkedin.com/in/namifalhan/" target="_blank" title="LinkedIn"><unicon name="linkedin"/></a>
 				<a href="http://github.com/namfal" target="_blank" title="GitHub"><unicon name="github"/></a>
 			</div>
-			<div class="theme">
-				<unicon name="moon"/>
-				<unicon name="sun"/>
+			<div class="theme" @click="darkTheme = !darkTheme">
+				<unicon name="moon" v-if="darkTheme"/>
+				<unicon name="sun" v-else/>
 			</div>
 		</div>
 	</div>
@@ -31,6 +31,12 @@ export default {
 	name: "Home",
 	components: {
 		Canvas
+	},
+	data () {
+		return {
+			paused: false,
+			darkTheme: true
+		}
 	}
 }
 </script>
