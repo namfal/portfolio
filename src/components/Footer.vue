@@ -1,16 +1,16 @@
 <template>
 	<footer>
 		<div class="controls" @click="$emit('toggle-animation')">
-			<unicon name="play" v-if="animationPaused"/>
-			<unicon name="pause" v-else/>
+			<button v-if="animationPaused"><unicon name="play"/></button>
+			<button v-else><unicon name="pause"/></button>
 		</div>
 		<div class="links">
 			<a href="https://www.linkedin.com/in/namifalhan/" target="_blank" title="LinkedIn"><unicon name="linkedin"/></a>
 			<a href="http://github.com/namfal" target="_blank" title="GitHub"><unicon name="github"/></a>
 		</div>
 		<div class="theme" @click="$emit('toggle-theme')">
-			<unicon name="moon" v-if="darkTheme"/>
-			<unicon name="sun" v-else/>
+			<button v-if="darkTheme"><unicon name="moon"/></button>
+			<button v-else><unicon name="sun" /></button>
 		</div>
 	</footer>
 </template>
