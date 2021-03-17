@@ -6,7 +6,8 @@
 	},
 	"extends": [
 		"plugin:vue/essential",
-		"eslint:recommended"
+		"eslint:recommended",
+		"plugin:compat/recommended"
 	],
 	"parserOptions": {
 		"parser": "babel-eslint"
