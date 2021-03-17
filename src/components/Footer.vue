@@ -29,5 +29,7 @@ export default {
 		align-items: center;
 		flex-direction: row;
 		justify-content: space-between;
+		position: relative;
+		/*top: -100px;*/
 	}
 </style>

@@ -118,7 +118,7 @@ export default {
 <style scoped>
 	.container-canvas {
 		width: 100vw;
-		height: 100vh;
+		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;

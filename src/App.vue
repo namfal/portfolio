@@ -50,7 +50,7 @@ export default {
 	}
 
 	html, body {
-		height: 100vh;
+		height: 100%;
 		width: 100vw;
 		overflow: hidden;
 		position: fixed;
@@ -61,7 +61,7 @@ export default {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		background-color: #001E32;
-		height: 100vh;
+		height: 100%;
 		width: 100vw;
 		overflow-x: hidden;
 		overflow-y: hidden;
