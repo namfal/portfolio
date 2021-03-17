@@ -77,7 +77,7 @@ export default {
 	}
 
 	footer {
-		flex: 0 0 70px;
+		flex: 0 0 90px;
 		width: 100%;
 		z-index: 2;
 	}
@@ -88,7 +88,7 @@ export default {
 	}
 
 	body.dark #app {
-		background-color: #001E32;
+		background-color: #001e32;
 	}
 
 	body.light #app {

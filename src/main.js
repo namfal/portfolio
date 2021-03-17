@@ -2,16 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueRouter from 'vue-router'
-import Unicon from 'vue-unicons/dist/vue-unicons-vue2.umd'
-import { uniLinkedin, uniGithub, uniPause, uniPlay, uniMoon, uniSun } from 'vue-unicons/dist/icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faMoon, faSun, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 
-Unicon.add([uniLinkedin, uniGithub, uniPause, uniPlay, uniMoon, uniSun ])
+library.add(faGithubSquare, faLinkedin, faMoon, faSun, faPause, faPlay)
 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter)
-Vue.use(Unicon, {
-	height: 32,
-	width: 32
-})
+
 
 Vue.config.productionTip = false
 

@@ -10,13 +10,13 @@
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.35",
-		"@fortawesome/free-solid-svg-icons": "^5.15.3",
+		"@fortawesome/free-brands-svg-icons": "^5.15.3",
+		"@fortawesome/free-regular-svg-icons": "^5.15.3",
 		"@fortawesome/vue-fontawesome": "^2.0.2",
 		"core-js": "^3.6.5",
 		"lodash": "^4.17.21",
 		"vue": "^2.6.11",
-		"vue-router": "^3.4.9",
-		"vue-unicons": "^3.0.0"
+		"vue-router": "^3.4.9"
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "~4.5.0",
