@@ -66,8 +66,8 @@ export default {
 	}
 
 	.controls-container {
-		box-shadow: inset 13px 13px 27px #000c14,
-			inset -13px -13px 27px #003050,
+		box-shadow: inset 13px 13px 27px rgba(0, 12, 20, 0.21),
+			inset -13px -13px 27px #00305080,
 			0 0px 10px 0 rgba(255, 255, 255, 0.2);
 
 		&:hover {
