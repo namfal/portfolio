@@ -85,10 +85,6 @@ export default {
 		}
 	}
 
-	.controls-container:hover .icon, .icon:hover {
-		color: @bright-turquoise;
-	}
-
 	.controls-container .icon {
 		font-size: 2.4em;
 	}
@@ -104,7 +100,7 @@ export default {
 		margin: 14px;
 	}
 
-	.controls-container .icon:hover,
+	.controls-container:hover .icon,
 	.links-container svg:hover{
 		color: @bright-turquoise;
 	}
