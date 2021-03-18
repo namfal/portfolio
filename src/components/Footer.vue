@@ -51,7 +51,6 @@ export default {
 	.links-container, .controls-container {
 		border-radius: 20px;
 		transition: all 100ms ease;
-		background-color: rgba(255, 255, 255, 0.3);
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
 	}
@@ -81,17 +80,18 @@ export default {
 		color: @bright-turquoise;
 	}
 
-	.icon {
-		font-size: 2.4em;
-		color: @jade;
-		margin: 0.4em;
-	}
-
 	.links-container svg {
 		height: 2.4em;
 		width: 2.4em;
+	}
+
+	.icon {
+		font-size: 2.4em;
+	}
+
+	.icon, .links-container svg {
 		color: @jade;
-		margin: 0.4em;
+		margin: 14px;
 	}
 
 	@media screen and (max-width: 400px){
