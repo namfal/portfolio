@@ -93,10 +93,6 @@ export default {
 		font-size: 2.4em;
 	}
 
-	.controls-container .icon:hover,  .links-container svg:hover{
-		color: @bright-turquoise;
-	}
-
 	.links-container svg {
 		height: 2.4em;
 		width: 2.4em;
@@ -105,6 +101,10 @@ export default {
 	.controls-container .icon, .links-container svg {
 		color: @jade;
 		margin: 14px;
+	}
+
+	.controls-container .icon:hover,  .links-container svg:hover{
+		color: @bright-turquoise;
 	}
 
 	@media screen and (max-width: 400px){
