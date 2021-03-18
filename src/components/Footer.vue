@@ -58,31 +58,31 @@ export default {
 	.links-container {
 		// box-shadow: 0 4px 20px 0 #00576e; // Light
 		box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.6); // Dark
-	}
 
-	.links-container:hover {
-		// box-shadow: 0 4px 20px 0 #00576e; // Light
-		box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.8); // Dark
+		&:hover {
+			// box-shadow: 0 4px 20px 0 #00576e; // Light
+			box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.8); // Dark
+		}
 	}
 
 	.controls-container {
 		box-shadow: inset 13px 13px 27px #000c14,
 			inset -13px -13px 27px #003050,
 			0 0px 10px 0 rgba(255, 255, 255, 0.2);
+
+		&:hover {
+			box-shadow: inset 13px 13px 27px #000c14,
+				inset -13px -13px 27px #003050,
+			0 0px 10px 0 rgba(255, 255, 255, 0.8);
+		}
 	}
 
 	.controls-container button {
 		background-color: transparent;
-	}
 
-	.controls-container button:hover {
-		cursor: pointer;
-	}
-
-	.controls-container:hover {
-		box-shadow: inset 13px 13px 27px #000c14,
-			inset -13px -13px 27px #003050,
-			0 0px 10px 0 rgba(255, 255, 255, 0.8);
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.controls-container:hover .icon, .icon:hover {
@@ -98,24 +98,36 @@ export default {
 		width: 2.4em;
 	}
 
-	.controls-container .icon, .links-container svg {
+	.controls-container .icon,
+	.links-container svg {
 		color: @jade;
 		margin: 14px;
 	}
 
-	.controls-container .icon:hover,  .links-container svg:hover{
+	.controls-container .icon:hover,
+	.links-container svg:hover{
 		color: @bright-turquoise;
 	}
 
 	@media screen and (max-width: 400px){
-		.icon {
+		.controls-container .icon {
 			font-size: 2em;
+		}
+
+		.links-container svg {
+			height: 2em;
+			width: 2em;
 		}
 	}
 
 	@media screen and (max-width: 300px){
-		.icon {
+		.controls-container .icon {
 			font-size: 1.6em;
+		}
+
+		.links-container svg {
+			height: 1.6em;
+			width: 1.6em;
 		}
 	}
 </style>
