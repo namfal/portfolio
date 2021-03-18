@@ -45,6 +45,7 @@ export default {
 		flex-direction: row;
 		justify-content: space-between;
 		position: relative;
+		padding: 0 20px;
 	}
 
 	.links-container, .controls-container {
@@ -62,14 +63,6 @@ export default {
 	.controls-container {
 		box-shadow: inset 13px 13px 27px #000c14,
 			inset -13px -13px 27px #003050;
-	}
-
-	.controls-container:first-child {
-		margin-left: 2em;
-	}
-
-	.controls-container:last-child {
-		margin-right: 2em;
 	}
 
 	.controls-container button {
@@ -110,14 +103,6 @@ export default {
 	@media screen and (max-width: 300px){
 		.icon {
 			font-size: 1.6em;
-		}
-
-		.controls-container:first-child {
-			margin-left: 0.5em;
-		}
-
-		.controls-container:last-child {
-			margin-right: 0.5em;
 		}
 	}
 </style>
