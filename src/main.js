@@ -4,10 +4,9 @@ import router from './router'
 import VueRouter from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faMoon, faSun, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faGithubSquare, faLinkedin, faMoon, faSun, faPause, faPlay)
+library.add(faMoon, faSun, faPause, faPlay)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueRouter)
