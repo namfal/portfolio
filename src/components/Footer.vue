@@ -60,8 +60,9 @@ export default {
 		box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.6); // Dark
 	}
 
-	.icon {
-		font-size: 2.4em;
+	.links-container:hover {
+		// box-shadow: 0 4px 20px 0 #00576e; // Light
+		box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.8); // Dark
 	}
 
 	.controls-container {
@@ -88,12 +89,20 @@ export default {
 		color: @bright-turquoise;
 	}
 
+	.controls-container .icon {
+		font-size: 2.4em;
+	}
+
+	.controls-container .icon:hover,  .links-container svg:hover{
+		color: @bright-turquoise;
+	}
+
 	.links-container svg {
 		height: 2.4em;
 		width: 2.4em;
 	}
 
-	.icon, .links-container svg {
+	.controls-container .icon, .links-container svg {
 		color: @jade;
 		margin: 14px;
 	}
