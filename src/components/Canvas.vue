@@ -74,7 +74,7 @@ export default {
 		},
 		drawPatterns () {
 			const colors = ['#fff', '#42aab4', '#bd7a96', '#7896c5', '#cb8f5d']
-			const count = Math.ceil(Math.max(this.width, this.height) / 20)
+			const count = Math.min(Math.ceil(Math.max(this.width, this.height) / 20), 80)
 			this.paper.setStart()
 			for (let i = 0; i < count; i++) {
 				const path = svgs[this.getRandomNumber(0, svgs.length - 1)]
@@ -82,8 +82,8 @@ export default {
 				const x = this.getRandomNumber(0, this.width)
 				const y = this.getRandomNumber(0, this.height)
 				const rotation = this.getRandomNumber(0,360)
-
 				const { translateX, translateY } = this.getTranslationCoordinates(x, y)
+				const scaleValue = Math.min(this.width/5000, 0.1)
 				const animation = Raphael.animation(
 					{
 						0.5: {transform: `...T${translateX},${translateY}`},
@@ -100,7 +100,7 @@ export default {
 						'stroke-width': 1
 					})
 					.translate(x, y)
-					.scale(0.1, 0.1, 0, 0)
+					.scale(scaleValue, scaleValue, 0, 0)
 					.rotate(rotation)
 					.animate(animation)
 			}
