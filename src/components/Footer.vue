@@ -56,12 +56,18 @@ export default {
 	}
 
 	.links-container {
-		box-shadow: 0px 4px 20px 0 #00576e;
+		// box-shadow: 0 4px 20px 0 #00576e; // Light
+		box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.6); // Dark
+	}
+
+	.icon {
+		font-size: 2.4em;
 	}
 
 	.controls-container {
 		box-shadow: inset 13px 13px 27px #000c14,
-			inset -13px -13px 27px #003050;
+			inset -13px -13px 27px #003050,
+			0 0px 10px 0 rgba(255, 255, 255, 0.2);
 	}
 
 	.controls-container button {
@@ -73,7 +79,9 @@ export default {
 	}
 
 	.controls-container:hover {
-		background-color: @midnight;
+		box-shadow: inset 13px 13px 27px #000c14,
+			inset -13px -13px 27px #003050,
+			0 0px 10px 0 rgba(255, 255, 255, 0.8);
 	}
 
 	.controls-container:hover .icon, .icon:hover {
@@ -83,10 +91,6 @@ export default {
 	.links-container svg {
 		height: 2.4em;
 		width: 2.4em;
-	}
-
-	.icon {
-		font-size: 2.4em;
 	}
 
 	.icon, .links-container svg {
