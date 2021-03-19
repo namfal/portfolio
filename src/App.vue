@@ -83,8 +83,9 @@ export default {
 	}
 
 	main {
-		flex: 1 1 auto;
+		/*flex: 0 0 auto; Doesnt work in Safari, use height: 100% instead or uncomment this and set height/flex-basis to 0 */
 		width: 100%;
+		height: 100%;
 	}
 
 	body.dark #app {
