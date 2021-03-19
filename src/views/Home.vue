@@ -100,4 +100,10 @@ export default {
 			height: 60%;
 		}
 	}
+
+	@supports (-moz-appearance:none) {
+		.text-container p {
+			background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+		}
+	}
 </style>

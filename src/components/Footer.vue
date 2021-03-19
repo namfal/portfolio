@@ -126,4 +126,10 @@ export default {
 			width: 1.6em;
 		}
 	}
+
+	@supports (-moz-appearance:none) {
+		.links-container, .controls-container {
+			background-color: rgba(0, 30, 50, 0.85);
+		}
+	}
 </style>
