@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" :class="darkTheme ? 'dark' : 'light'">
 		<Navigation />
 		<main>
 			<router-view :animationPaused="paused" :darkTheme="darkTheme"/>
@@ -36,11 +36,17 @@ export default {
 		toggleTheme: function () {
 			this.darkTheme = !this.darkTheme
 		}
+	},
+	created () {
+		this.darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 	}
 }
 </script>
 
-<style>
+<style lang="less">
+	@import "./styles/dark-theme.less";
+	@import "./styles/light-theme.less";
+
 	* {
 		border: none;
 		padding: 0;
@@ -59,7 +65,6 @@ export default {
 	#app {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		background-color: #001E32;
 		height: 100%;
 		width: 100vw;
 		overflow-x: hidden;
@@ -86,14 +91,6 @@ export default {
 		/*flex: 0 0 auto; Doesnt work in Safari, use height: 100% instead or uncomment this and set height/flex-basis to 0 */
 		width: 100%;
 		height: 100%;
-	}
-
-	body.dark #app {
-		background-color: #001e32;
-	}
-
-	body.light #app {
-		background-color: #d2ecff;
 	}
 
 </style>

@@ -76,11 +76,10 @@ export default {
 		overflow: scroll;
 		line-height: 1.3em;
 		border-radius: 20px;
-		box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
-		background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
 	}
+
 	@media screen and (min-width: 700px) {
 		.container-home {
 			padding: 5% 0;
@@ -98,12 +97,6 @@ export default {
 
 		.text-container {
 			height: 60%;
-		}
-	}
-
-	@supports (-moz-appearance:none) {
-		.text-container p {
-			background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
 		}
 	}
 </style>

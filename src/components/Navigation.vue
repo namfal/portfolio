@@ -23,8 +23,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-	@import '../styles/common';
-
 	nav {
 		position: relative;
 		margin: 20px 0;
@@ -35,26 +33,12 @@ export default {
 	}
 
 	.link {
-		color: white;
 		text-decoration: none;
 		margin: 0 1em;
 		font-size: 1.5em;
-		border: 2px solid white;
 		padding: 0.5em;
-		box-shadow: 4px 4px 0 0 white;
 		transition: all 200ms ease-in-out;
 		user-select: none;
-		background-color: @midnight;
-
-		&:hover {
-			box-shadow: 0 0 0 4px @bright-turquoise;
-		}
-	}
-
-	.router-link-active{
-		color: @bright-turquoise;
-		border-color: @bright-turquoise;
-		box-shadow: 0 0 0 4px @bright-turquoise;
 	}
 
 	.hamburger {
@@ -64,7 +48,6 @@ export default {
 			width: 40px;
 			height: 5px;
 			margin: 10px;
-			background-color: white;
 			border-radius: 8px;
 		}
 	}

@@ -1,0 +1,66 @@
+@midnight: #001e32;
+@onahau: rgba(210, 236, 255, 1.00);
+@sea-green: rgba(35, 175, 186, 1.00);
+@turquoise: rgba(45, 211, 194, 1.00);
+
+#app.light {
+	background-color: @onahau;
+}
+
+#app.light .links-container,
+#app.light .controls-container {
+	box-shadow: 0 4px 20px 0 fade(@midnight, 60);
+
+	&:hover {
+		 box-shadow: 0 4px 20px 0 fade(@midnight, 90);
+	}
+}
+
+#app.light .controls-container .icon,
+#app.light .links-container svg {
+	color: @sea-green;
+}
+
+#app.light .controls-container:hover .icon,
+#app.light .links-container svg:hover{
+	color: @turquoise;
+}
+
+#app.light .link {
+	color: @midnight;
+	border: 2px solid @midnight;
+	box-shadow: 4px 4px 0 0 @midnight;
+	background-color: @onahau;
+
+	&:hover {
+		box-shadow: 0 0 0 4px @sea-green;
+	}
+}
+
+#app.light .router-link-active{
+	color: @sea-green;
+	border-color: @sea-green;
+	box-shadow: 0 0 0 4px @sea-green;
+}
+
+#app.light .hamburger div {
+	background-color: @midnight;
+}
+
+#app.light .text-container p {
+	color: @midnight;
+	box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4);
+	background: linear-gradient(to bottom right, fade(@midnight, 20), fade(@midnight, 40));
+}
+
+@supports (-moz-appearance:none) {
+	#app.light .links-container,
+	#app.light .controls-container {
+		background-color: fade(@onahau, 90);
+	}
+
+	#app.light .text-container p {
+		color: @onahau;
+		background: linear-gradient(to bottom right, fade(@midnight, 70), fade(@midnight, 90));
+	}
+}

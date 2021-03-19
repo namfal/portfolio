@@ -37,8 +37,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-	@import '../styles/common.less';
-
 	footer {
 		display: flex;
 		align-items: center;
@@ -53,28 +51,6 @@ export default {
 		transition: all 100ms ease;
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
-	}
-
-	.links-container {
-		// box-shadow: 0 4px 20px 0 #00576e; // Light
-		box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.6); // Dark
-
-		&:hover {
-			// box-shadow: 0 4px 20px 0 #00576e; // Light
-			box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.8); // Dark
-		}
-	}
-
-	.controls-container {
-		box-shadow: inset 13px 13px 27px rgba(0, 12, 20, 0.21),
-			inset -13px -13px 27px #00305080,
-			0 0px 10px 0 rgba(255, 255, 255, 0.2);
-
-		&:hover {
-			box-shadow: inset 13px 13px 27px #000c14,
-				inset -13px -13px 27px #003050,
-			0 0px 10px 0 rgba(255, 255, 255, 0.8);
-		}
 	}
 
 	.controls-container button {
@@ -96,13 +72,7 @@ export default {
 
 	.controls-container .icon,
 	.links-container svg {
-		color: @jade;
 		margin: 14px;
-	}
-
-	.controls-container:hover .icon,
-	.links-container svg:hover{
-		color: @bright-turquoise;
 	}
 
 	@media screen and (max-width: 400px){
@@ -124,12 +94,6 @@ export default {
 		.links-container svg {
 			height: 1.6em;
 			width: 1.6em;
-		}
-	}
-
-	@supports (-moz-appearance:none) {
-		.links-container, .controls-container {
-			background-color: rgba(0, 30, 50, 0.85);
 		}
 	}
 </style>

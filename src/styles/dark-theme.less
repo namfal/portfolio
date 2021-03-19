@@ -1,0 +1,72 @@
+@bright-turquoise: #55FFCB;
+@midnight: #001e32;
+@jade: #00BA81;
+@onahau: rgba(210, 236, 255, 1.00);
+@charcoal: rgba(4, 15, 30, 1.00);
+@purussianBlue: rgba(0, 49, 83, 1);
+
+#app.dark {
+	background-color: @midnight;
+}
+
+#app.dark .links-container,
+#app.dark .controls-container {
+	box-shadow: inset 13px 13px 27px @charcoal,
+				inset -13px -13px 27px @purussianBlue,
+				0 4px 20px 0 fade(@charcoal, 50);
+
+	&:hover {
+		box-shadow: inset 13px 13px 27px @charcoal,
+					inset -13px -13px 27px @purussianBlue,
+					0 4px 20px 0 @charcoal;
+	}
+}
+
+#app.dark .controls-container .icon,
+#app.dark .links-container svg {
+	color: @jade;
+}
+
+#app.dark .controls-container:hover .icon,
+#app.dark .links-container svg:hover{
+	color: @bright-turquoise;
+}
+
+#app.dark .link {
+	color: @onahau;
+	border: 2px solid @onahau;
+	box-shadow: 4px 4px 0 0 @onahau;
+	background-color: @midnight;
+
+	&:hover {
+		box-shadow: 0 0 0 4px @bright-turquoise;
+	}
+}
+
+#app.dark .router-link-active{
+	color: @bright-turquoise;
+	border-color: @bright-turquoise;
+	box-shadow: 0 0 0 4px @bright-turquoise;
+}
+
+#app.dark .hamburger div {
+	background-color: @onahau;
+}
+
+#app.dark .text-container p {
+	color: @onahau;
+	box-shadow: 0 0 20px 4px @charcoal;
+	background: linear-gradient(to bottom right, fade(@onahau, 20), fade(@onahau, 40));
+}
+
+@supports (-moz-appearance:none) {
+	#app.dark .links-container,
+	#app.dark .controls-container {
+		background-color: fade(@midnight, 75);
+	}
+
+	#app.dark .text-container p {
+		color: @midnight;
+		background: linear-gradient(to bottom right, fade(@onahau, 60), fade(@onahau, 90));
+	}
+}
