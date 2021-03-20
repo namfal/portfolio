@@ -1,0 +1,57 @@
+{
+	"highlight": ["HTML", "CSS", "JavaScript", "React", "Vue", "jQuery", "MongoDB", "Express", "NodeJS", "PHP", "MySQL"],
+	"workExperience": [
+		{
+			"title": "Front-end Javascript Developer",
+			"workPlace": "Seats.io",
+			"location": "Tienen, Belgium",
+			"remote": true,
+			"dates": "10.2018 - 03.2020",
+			"body": [
+				"Played a major role in transitioning to TypeScript and building a new SPA using React and reusable React components",
+				"Wrote the JavaScript client library for Seats.io rest API and tests in Jest, automated tests and releases with Travis CI and npm",
+				"Brainstormed and implemented new features based on wire-frames, discussed progress, UI/UX and customer feedback during daily product meetings",
+				"Maintained and refactored code, fixed bugs and reviewed code, implemented ESLint rules for better code quality and consistent style across different projects"
+			]
+		},
+		{
+			"title": "Web Content Manager",
+			"workPlace": "Conferences and Events Office, KU Leuven",
+			"location": "Leuven, Belgium",
+			"remote": true,
+			"dates": "05.2017 - 10.2017",
+			"body": [
+				"Designed and created responsive web pages using Plone CMS and Bootstrap"
+			]
+		},
+		{
+			"title": "App Developer",
+			"workPlace": "Flanders Centre Of Post-harvest Technology",
+			"location": "Leuven, Belgium",
+			"remote": true,
+			"dates": "11.2016",
+			"body": [
+				"Developed an app for Android and Windows Phone using standard web technologies and Cordova framework"
+			]
+		},
+		{
+			"title": "Full Stack Developer",
+			"workPlace": "Maryville College Residence Life",
+			"location": "Maryville, TN, USA",
+			"dates": "05.2015 - 08.2015",
+			"remote": true,
+			"body": [
+				"Streamlined the process of creating “Room Condition Reports” by developing a responsive CRUD web app using LAMP Stack",
+				"Received Distinguished Service Award for my contribution to the Maryville College Community"
+			]
+		}
+	],
+	"education": {
+		"degree":"Double BA Degree in Computer Science and Mathematics",
+		"dates": "2012-2016",
+		"honors": "Magna Cum Laude",
+		"school": "Maryville College",
+		"location": "Maryville, TN, USA",
+		"thesis": "Hypotrochoids: iOS App and Laser Project"
+	}
+}
