@@ -69,7 +69,7 @@ export default {
 		max-width: 700px;
 		position: absolute;
 
-		font-size: 1.6em;
+		font-size: 1.4em;
 		z-index: 2;
 		margin: 0.8em;
 		padding: 0.8em;
