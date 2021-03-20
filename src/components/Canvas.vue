@@ -37,7 +37,7 @@ export default {
 		},
 		darkTheme: function () {
 			this.paperSet.attr({
-				fill: this.darkTheme ? '#001E32' : '#d2ecff'
+				fill: this.getFillColor()
 			})
 		}
 	},
@@ -96,7 +96,7 @@ export default {
 				this.paper.path(path)
 					.attr({
 						stroke: color,
-						fill: '#001E32',
+						fill: this.getFillColor(),
 						'stroke-width': 1
 					})
 					.translate(x, y)
@@ -110,6 +110,9 @@ export default {
 			if (this.paper) this.paper.remove()
 			this.paper = new Raphael(this.$refs.container, this.width, this.height)
 			this.drawPatterns()
+		},
+		getFillColor () {
+			return this.darkTheme ? '#001E32' : '#d2ecff'
 		}
 	}
 }
