@@ -71,7 +71,6 @@ export default {
 
 		font-size: 1.4em;
 		z-index: 2;
-		margin: 0.8em;
 		padding: 0.8em;
 		overflow: scroll;
 		line-height: 1.3em;
