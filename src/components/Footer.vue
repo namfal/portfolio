@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<div class="controls-container" @click="$emit('toggle-animation')">
+		<div :class="[{'invisible': $route.name !== 'Home'}, 'controls-container']" @click="$emit('toggle-animation')">
 			<button v-if="animationPaused">
 				<font-awesome-icon  :icon="['fas', 'play']" class="icon"></font-awesome-icon>
 			</button>
@@ -51,6 +51,10 @@ export default {
 		transition: all 100ms ease;
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
+	}
+
+	.controls-container.invisible {
+		visibility: hidden;
 	}
 
 	.controls-container button {
