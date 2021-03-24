@@ -91,6 +91,7 @@ export default {
 		/*flex: 0 0 auto; Doesnt work in Safari, use height: 100% instead or uncomment this and set height/flex-basis to 0 */
 		width: 100%;
 		height: 100%;
+		position: relative;
 	}
 
 </style>

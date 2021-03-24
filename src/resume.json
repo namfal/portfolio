@@ -1,5 +1,5 @@
 {
-	"highlight": ["HTML", "CSS", "JavaScript", "React", "Vue", "jQuery", "MongoDB", "Express", "NodeJS", "PHP", "MySQL"],
+	"highlights": ["HTML", "CSS", "JavaScript", "React", "Vue", "jQuery", "MongoDB", "Express", "NodeJS", "PHP", "MySQL"],
 	"workExperience": [
 		{
 			"title": "Front-end Javascript Developer",
@@ -12,7 +12,8 @@
 				"Wrote the JavaScript client library for Seats.io rest API and tests in Jest, automated tests and releases with Travis CI and npm",
 				"Brainstormed and implemented new features based on wire-frames, discussed progress, UI/UX and customer feedback during daily product meetings",
 				"Maintained and refactored code, fixed bugs and reviewed code, implemented ESLint rules for better code quality and consistent style across different projects"
-			]
+			],
+			"key": "seatsio"
 		},
 		{
 			"title": "Web Content Manager",
@@ -22,7 +23,8 @@
 			"dates": "05.2017 - 10.2017",
 			"body": [
 				"Designed and created responsive web pages using Plone CMS and Bootstrap"
-			]
+			],
+			"key": "conferencesAndEvents"
 		},
 		{
 			"title": "App Developer",
@@ -32,7 +34,8 @@
 			"dates": "11.2016",
 			"body": [
 				"Developed an app for Android and Windows Phone using standard web technologies and Cordova framework"
-			]
+			],
+			"key": "postharvest"
 		},
 		{
 			"title": "Full Stack Developer",
@@ -43,7 +46,8 @@
 			"body": [
 				"Streamlined the process of creating “Room Condition Reports” by developing a responsive CRUD web app using LAMP Stack",
 				"Received Distinguished Service Award for my contribution to the Maryville College Community"
-			]
+			],
+			"key": "resLife"
 		}
 	],
 	"education": {
