@@ -104,6 +104,7 @@ export default {
 
 	p, li {
 		font-size: 1.4em;
+		line-height: 1.3em;
 	}
 
 </style>

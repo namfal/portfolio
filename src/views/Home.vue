@@ -47,7 +47,6 @@ export default {
 		max-width: 700px;
 		padding: 0.8em;
 		overflow: scroll;
-		line-height: 1.3em;
 		border-radius: 20px;
 		-webkit-backdrop-filter: blur(4px);
 		backdrop-filter: blur(4px);
