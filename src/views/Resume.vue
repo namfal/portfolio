@@ -41,6 +41,28 @@ export default {
 		height: 100%;
 	}
 
+	.highlights {
+		width: 100%;
+		position: relative;
+		height: 100px;
+	}
+
+	.highlights ul {
+		width: 100%;
+		overflow: scroll;
+		position: absolute;
+		padding: 1em;
+	}
+
+	.highlights ul li {
+		display: inline;
+		padding: 0 1em;
+		margin: 0 0.5em;
+		border-radius: 20px;
+		font-weight: 600;
+		background-color: white;
+	}
+
 	@media screen and (max-width: 700px){
 		.container-resume {
 			font-size: 1.2em;
