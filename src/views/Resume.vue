@@ -48,12 +48,12 @@ export default {
 	.highlights {
 		width: 100%;
 		overflow: scroll;
-		padding: 1em;
+		padding: 2em 0;
 	}
 
 	.highlights li {
 		display: inline;
-		padding: 0 1em;
+		padding: 0.5em;
 		margin: 0 0.5em;
 		border-radius: 20px;
 		font-weight: 600;
