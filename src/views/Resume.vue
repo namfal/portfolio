@@ -60,7 +60,7 @@ export default {
 	}
 
 	.experience {
-		margin: 30px 0 30px 20px;
+		margin: 30px 0;
 		padding: 20px;
 		border-radius: 30px;
 		position: relative;
