@@ -1,6 +1,6 @@
 <template>
 	<div class="container-resume">
-		<div class="'highlights">
+		<div class="highlights">
 			<ul>
 				<li v-for="highlight in resume.highlights" :key="highlight">{{highlight}}</li>
 			</ul>
