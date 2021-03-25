@@ -21,14 +21,12 @@ export default {
 		}
 	},
 	mounted () {
-		this.$nextTick(() => {
-			window.addEventListener('resize', throttle(this.onResize, 500))
-		})
-
+		this.throttledResize = throttle(this.onResize, 500)
 		this.redrawPatterns()
+		window.addEventListener('resize', this.throttledResize)
 	},
 	beforeDestroy() {
-		window.removeEventListener('resize', this.onResize)
+		window.removeEventListener('resize', this.throttledResize)
 	},
 	watch: {
 		animation: function () {
@@ -68,6 +66,7 @@ export default {
 			}
 		},
 		onResize () {
+			console.log('resizing')
 			this.width = window.innerWidth
 			this.height = window.innerHeight
 			this.redrawPatterns()
