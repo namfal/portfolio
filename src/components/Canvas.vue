@@ -21,7 +21,7 @@ export default {
 		}
 	},
 	mounted () {
-		this.throttledResize = throttle(this.onResize, 500)
+		this.throttledResize = throttle(this.onResize, 500, {leading: false})
 		this.redrawPatterns()
 		window.addEventListener('resize', this.throttledResize)
 	},
