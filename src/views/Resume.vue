@@ -3,17 +3,19 @@
 		<ul class="highlights">
 			<li v-for="highlight in resume.highlights" :key="highlight">{{highlight}}</li>
 		</ul>
-		<h3>Work Experience</h3>
-			<div v-for="experience in resume.workExperience" :key="experience.key">
-				<h4>{{experience.workPlace}}</h4>
-				<ul>
-					<li v-for="(item, index) in experience.body" :key="experience.key + index">{{item}} </li>
-				</ul>
-			</div>
-		<h3>Education</h3>
-			<p>
-				{{resume.education.degree}}
-			</p>
+		<h3 class="resume-section-header">Work Experience</h3>
+		<div class="experience" v-for="experience in resume.workExperience" :key="experience.key">
+			<h4>{{experience.workPlace}}</h4>
+			<p class="experience-info">{{experience.dates}} | {{experience.location}}</p>
+			<ul class="experience-bullets">
+				<li v-for="(item, index) in experience.body" :key="experience.key + index">{{item}} </li>
+			</ul>
+			<div v-if="experience.remote" class="remote-badge">remote</div>
+		</div>
+		<h3 class="resume-section-header">Education</h3>
+		<div class="experience">
+			<h4>{{resume.education.degree}}</h4>
+		</div>
 	</div>
 </template>
 
@@ -30,12 +32,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 	.container-resume {
 		height: 100%;
 		width: 100%;
 		overflow: scroll;
-		padding: 10%;
+		padding: 5%;
+		user-select: none;
+	}
+
+	.resume-section-header {
+		margin: 40px 0;
 	}
 
 	.highlights {
@@ -50,6 +57,39 @@ export default {
 		margin: 0 0.5em;
 		border-radius: 20px;
 		font-weight: 600;
+	}
+
+	.experience {
+		margin: 30px 0 30px 20px;
+		padding: 20px;
+		border-radius: 30px;
+		position: relative;
+
+		h4 {
+			font-weight: 600;
+		}
+	}
+
+	.experience-bullets {
+		margin-left: 50px;
+
+		li {
+			padding: 8px 0;
+		}
+	}
+
+	.experience-info {
+		text-align: right;
+		font-weight: 300;
+	}
+
+	.remote-badge {
+		position: absolute;
+		right: 25px;
+		top: 15px;
+		padding: 0 1em;
+		border-radius: 20px;
+		opacity: 0.4;
 	}
 
 	@media screen and (max-width: 370px){
