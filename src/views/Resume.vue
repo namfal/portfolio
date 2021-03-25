@@ -11,9 +11,9 @@
 				</ul>
 			</div>
 		<h3>Education</h3>
-			<div>
+			<p>
 				{{resume.education.degree}}
-			</div>
+			</p>
 	</div>
 </template>
 
@@ -45,18 +45,11 @@ export default {
 	}
 
 	.highlights li {
-		font-size: 1.2em;
 		display: inline;
 		padding: 0 1em;
 		margin: 0 0.5em;
 		border-radius: 20px;
 		font-weight: 600;
-	}
-
-	@media screen and (max-width: 700px){
-		.container-resume {
-			font-size: 1.2em;
-		}
 	}
 
 	@media screen and (max-width: 370px){

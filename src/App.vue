@@ -94,4 +94,16 @@ export default {
 		overflow: hidden;
 	}
 
+	h3 {
+		font-size: 1.8em;
+	}
+
+	h4 {
+		font-size: 1.5em;
+	}
+
+	p, li {
+		font-size: 1.4em;
+	}
+
 </style>

@@ -45,7 +45,6 @@ export default {
 		height: auto;
 		width: 80%;
 		max-width: 700px;
-		font-size: 1.4em;
 		padding: 0.8em;
 		overflow: scroll;
 		line-height: 1.3em;
@@ -55,10 +54,6 @@ export default {
 	}
 
 	@media screen and (max-width: 370px), (max-height: 530px) {
-		.text {
-			font-size: 1.4em;
-		}
-
 		.pic {
 			height: 40%;
 		}
