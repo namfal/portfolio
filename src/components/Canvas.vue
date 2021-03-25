@@ -66,7 +66,6 @@ export default {
 			}
 		},
 		onResize () {
-			console.log('resizing')
 			this.width = window.innerWidth
 			this.height = window.innerHeight
 			this.redrawPatterns()
