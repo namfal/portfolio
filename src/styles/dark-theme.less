@@ -59,6 +59,12 @@
 	background: linear-gradient(to bottom right, fade(@onahau, 20), fade(@onahau, 40));
 }
 
+#app.dark .highlights ul li {
+	background-color: @onahau;
+	color: @midnight;
+	box-shadow: 6px 4px 6px 0 fade(@onahau, 30);
+}
+
 @supports (-moz-appearance:none) {
 	#app.dark .links-container,
 	#app.dark .controls-container {
