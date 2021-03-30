@@ -1,11 +1,15 @@
 <template>
 	<div class="container-projects">
-		<div class="card" v-for="num in 50" :key="num" @click.self="e => e.target.classList.toggle('expanded')">
-			<div class="compact-content">
-				Content
-			</div>
+		<div :class="[{'shown' : showBlur}, 'blur']" @click="e => close()"></div>
+		<div class="card" v-for="num in 50" :key="num" @click="e => expand(e)">
 			<div class="card-child">
-				<button @click.stop="e => close(e)">Close</button>
+				<div class="front-content">
+					Content
+				</div>
+				<div class="backside-content">
+					Reverse Content
+					<button @click.stop="e => close(e.target.parentNode.parentNode)">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -14,9 +18,32 @@
 <script>
 export default {
 	name: 'Projects',
+	data () {
+		return {
+			showBlur: false,
+			currentlyOpenCard: null
+		}
+	},
 	methods: {
-		close (e) {
-			e.target.parentNode.parentNode.classList.toggle('expanded')
+		viewportPercentage (percentage) {
+			return {width: window.innerWidth * percentage / 100, height: window.innerHeight * percentage / 100}
+		},
+		expand (e) {
+			if (this.showBlur) return
+			const {x, y} = e.target.parentNode.getBoundingClientRect()
+			const { width, height } = this.viewportPercentage(70)
+			const translateX = (window.innerWidth / 2) - x - (width / 2)
+			const translateY = (window.innerWidth / 2) - y - (height / 2)
+			e.target.parentNode.classList.toggle('expanded')
+			e.target.style.transform = `translate(${translateX}px, ${translateY}px) rotateY(180deg)`
+			this.showBlur = true
+			this.currentlyOpenCard = e.target
+		},
+		close (element = this.currentlyOpenCard) {
+			element.parentNode.classList.toggle('expanded')
+			element.style.transform = `rotateY(0deg) translate(0px, 0px)`
+			this.showBlur = false
+			this.currentlyOpenCard = null
 		}
 	}
 }
@@ -37,57 +64,66 @@ export default {
 		height: 300px;
 		background-color: #2cd3c2;
 		margin: 30px;
+		position: relative;
 
 		.card-child {
+			position: absolute;
+			top: 0;
+			left: 0;
 			height: 100%;
 			width: 100%;
-			pointer-events: none;
-			z-index: 4;
+			transition: all 500ms linear;
 
-			button {
+			.backside-content {
 				display: none;
 			}
 		}
 
-		&.expanded{
-			background-color: transparent;
+		&.expanded {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background-color: transparent;
 
 			.card-child {
 				position: absolute;
-				top: 50%;
-				left: 50%;
+				top: 0;
+				left: 0;
 				width: 70vw;
 				height: 70vh;
 				pointer-events: auto;
 				background-color: white;
 				overflow: scroll;
 				z-index: 4;
-				transform: translate(-50%, -50%);
 
-				button {
+				.backside-content {
 					display: unset;
+					transform: rotateY(180deg);
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+
+				.front-content {
+					display: none;
 				}
 			}
+		}
+	}
 
-			&::before {
-				content: '';
-				height: 100vh;
-				width: 100vw;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 4;
-				box-shadow: 0 0 20px 0 rgb(0 30 50 / 30%);
-				background: linear-gradient(to bottom right, rgba(0, 8, 17, 0.64), rgba(0, 30, 50, 0.4));
-				backdrop-filter: blur(5px);
-			}
+	.blur {
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background: linear-gradient(to bottom right, rgba(0, 8, 17, 0.64), rgba(0, 30, 50, 0.4));
+		backdrop-filter: blur(5px);
+		display: none;
 
-			.compact-content {
-				display: none;
-			}
+		&.shown {
+			display: unset;
 		}
 	}
 </style>
