@@ -1,5 +1,5 @@
 <template>
-	<div class="container-projetcs"></div>
+	<div class="container-projects"></div>
 </template>
 
 <script>
