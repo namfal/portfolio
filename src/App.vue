@@ -95,16 +95,46 @@ export default {
 	}
 
 	h3 {
-		font-size: 1.8em;
+		font-size: 2em;
 	}
 
 	h4 {
-		font-size: 1.5em;
+		font-size: 1.6em;
 	}
 
 	p, li {
-		font-size: 1.4em;
-		line-height: 1.3em;
+		font-size: 1.5em;
+		line-height: 1.4em;
+	}
+
+	@media screen and (max-width: 900px){
+		h3 {
+			font-size: 1.8em;
+		}
+
+		h4 {
+			font-size: 1.5em;
+		}
+
+		p, li {
+			font-size: 1.4em;
+			line-height: 1.3em;
+		}
+	}
+
+	@media screen and (max-width: 400px){
+		h3 {
+			font-size: 1.6em;
+		}
+
+		h4 {
+			font-size: 1.3em;
+		}
+
+		p, li {
+			font-size: 1.2em;
+			line-height: 1.1em;
+		}
 	}
 
 </style>
