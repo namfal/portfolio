@@ -37,6 +37,7 @@ export default {
 
 	.pic {
 		height: 30%;
+		max-height: 300px;
 		width: auto;
 		border-radius: 50%;
 	}
@@ -52,9 +53,9 @@ export default {
 		backdrop-filter: blur(4px);
 	}
 
-	@media screen and (max-width: 370px), (max-height: 530px) {
+	@media screen and (max-height: 400px) {
 		.pic {
-			height: 40%;
+			display: none;
 		}
 	}
 </style>
