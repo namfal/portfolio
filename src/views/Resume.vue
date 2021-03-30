@@ -19,7 +19,17 @@
 		</div>
 		<h3 class="resume-section-header">Education</h3>
 		<div class="experience">
-			<h4>{{resume.education.degree}}</h4>
+			<div class="experience-info">
+				<h4>{{resume.education.degree}}</h4>
+				<p class="experience-date">{{resume.education.dates}}</p>
+			</div>
+			<div class="experience-info">
+				<p class="experience-location">{{resume.education.school}} | {{resume.education.location}}</p>
+			</div>
+			<ul class="experience-bullets">
+				<li>Honors: {{resume.education.honors}} </li>
+				<li>Thesis: {{resume.education.thesis}} </li>
+			</ul>
 		</div>
 	</div>
 </template>
