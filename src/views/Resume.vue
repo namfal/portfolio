@@ -5,12 +5,14 @@
 		</ul>
 		<h3 class="resume-section-header">Work Experience</h3>
 		<div class="experience" v-for="experience in resume.workExperience" :key="experience.key">
-			<h4>{{experience.workPlace}}</h4>
-			<p class="experience-info">{{experience.dates}} | {{experience.location}}</p>
+			<div class="experience-title">
+				<h4>{{experience.workPlace}}</h4>
+				<p class="experience-date">{{experience.dates}}</p>
+			</div>
+			<p class="experience-location">{{experience.location}} <span v-if="experience.remote" class="remote-badge">remote</span></p>
 			<ul class="experience-bullets">
 				<li v-for="(item, index) in experience.body" :key="experience.key + index">{{item}} </li>
 			</ul>
-			<div v-if="experience.remote" class="remote-badge">remote</div>
 		</div>
 		<h3 class="resume-section-header">Education</h3>
 		<div class="experience">
@@ -65,17 +67,29 @@ export default {
 		border-radius: 30px;
 		position: relative;
 
-		h4 {
-			font-weight: 600;
+		.experience-title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			h4 {
+				font-weight: 600;
+			}
+
+			p {
+				display: block;
+				font-size: 1.2em;
+				font-weight: 300;
+			}
 		}
 
-		.experience-info {
-			text-align: right;
+		.experience-location {
+			font-size: 1.2em;
 			font-weight: 300;
 		}
 
 		.experience-bullets {
-			margin-left: 20px;
+			margin: 20px 0 0 20px;
 
 			li {
 				padding: 4px 0;
@@ -84,12 +98,25 @@ export default {
 		}
 
 		.remote-badge {
-			position: absolute;
-			right: 25px;
-			top: 15px;
+			display: none;
+			font-size: 16px;
 			padding: 0 1em;
 			border-radius: 20px;
 			opacity: 0.4;
+		}
+	}
+
+	@media screen and (max-width: 800px){
+		.experience-title {
+			flex-direction: column;
+
+			h4 {
+				text-align: center;
+			}
+		}
+
+		.experience-location {
+			text-align: center;
 		}
 	}
 
