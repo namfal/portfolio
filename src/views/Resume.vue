@@ -68,28 +68,29 @@ export default {
 		h4 {
 			font-weight: 600;
 		}
-	}
 
-	.experience-bullets {
-		margin-left: 50px;
-
-		li {
-			padding: 8px 0;
+		.experience-info {
+			text-align: right;
+			font-weight: 300;
 		}
-	}
 
-	.experience-info {
-		text-align: right;
-		font-weight: 300;
-	}
+		.experience-bullets {
+			margin-left: 20px;
 
-	.remote-badge {
-		position: absolute;
-		right: 25px;
-		top: 15px;
-		padding: 0 1em;
-		border-radius: 20px;
-		opacity: 0.4;
+			li {
+				padding: 4px 0;
+				list-style: circle;
+			}
+		}
+
+		.remote-badge {
+			position: absolute;
+			right: 25px;
+			top: 15px;
+			padding: 0 1em;
+			border-radius: 20px;
+			opacity: 0.4;
+		}
 	}
 
 	@media screen and (max-width: 370px){
