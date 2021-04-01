@@ -6,7 +6,7 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint --no-fix"
+		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -35,6 +35,6 @@
 		"not dead"
 	],
 	"gitHooks": {
-		"pre-commit": "vue-cli-service lint"
+		"pre-commit": "vue-cli-service lint --no-fix"
 	}
 }
