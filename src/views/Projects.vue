@@ -1,10 +1,11 @@
 <template>
 	<div class="container-projects">
 		<div :class="[{'shown' : showBlur}, 'blur']" @click="e => close()"></div>
-		<div class="card" v-for="num in 50" :key="num" @click="e => expand(e)">
+		<div class="card" @click="e => expand(e)">
 			<div class="card-child">
 				<div class="front-content">
-					Content
+					<img src="../assets/crypto-watch.png" alt="">
+					<h4>Crypto Watch</h4>
 				</div>
 				<div class="backside-content">
 					Reverse Content
@@ -76,6 +77,16 @@ export default {
 
 			.backside-content {
 				display: none;
+			}
+
+			.front-content {
+				height: 100%;
+				overflow: hidden;
+				pointer-events: none;
+
+				img {
+					height: 70%;
+				}
 			}
 		}
 
