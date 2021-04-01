@@ -63,9 +63,11 @@ export default {
 	.card {
 		width: 250px;
 		height: 300px;
-		background-color: #2cd3c2;
 		margin: 30px;
 		position: relative;
+		border-radius: 20px;
+		overflow: hidden;
+		transition: all 100ms ease-in-out;
 
 		.card-child {
 			position: absolute;
@@ -87,6 +89,10 @@ export default {
 				img {
 					height: 70%;
 				}
+
+				h4 {
+					margin: 10px;
+				}
 			}
 		}
 
@@ -95,6 +101,7 @@ export default {
 			justify-content: center;
 			align-items: center;
 			background-color: transparent;
+			overflow: unset;
 
 			.card-child {
 				position: absolute;
@@ -119,6 +126,10 @@ export default {
 					display: none;
 				}
 			}
+		}
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 
