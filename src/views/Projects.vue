@@ -33,7 +33,7 @@ export default {
 			const {x, y} = e.target.parentNode.getBoundingClientRect()
 			const { width, height } = this.viewportPercentage(70)
 			const translateX = (window.innerWidth / 2) - x - (width / 2)
-			const translateY = (window.innerWidth / 2) - y - (height / 2)
+			const translateY = (window.innerHeight / 2) - y - (height / 2)
 			e.target.parentNode.classList.toggle('expanded')
 			e.target.style.transform = `translate(${translateX}px, ${translateY}px) rotateY(180deg)`
 			this.showBlur = true
