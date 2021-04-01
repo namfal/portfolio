@@ -38,7 +38,7 @@ export default {
 		}
 	},
 	created () {
-		this.darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+		this.darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	}
 }
 </script>
