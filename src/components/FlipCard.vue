@@ -10,9 +10,10 @@
 				<img :src="require(`@/assets/${fileName}`)" alt="Screenshots of a project I worked on">
 				<h4>{{title}}</h4>
 				<p class="tech-stack">{{techStack}}</p>
-				<p>{{text}}</p>
+				<hr/>
 				<a :href="link" target="_blank"><font-awesome-icon  :icon="['fas', 'link']" class="icon"></font-awesome-icon> Live Demo</a>
 				<a :href="github" target="_blank" v-if="github"><font-awesome-icon  :icon="['fab', 'github']" class="icon"></font-awesome-icon> Github</a>
+				<p>{{text}}</p>
 				<button @click="flipCard">Close</button>
 			</div>
 		</div>
