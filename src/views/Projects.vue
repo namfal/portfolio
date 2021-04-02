@@ -1,7 +1,7 @@
 <template>
 	<div class="container-projects">
 		<FlipCard
-			fileName="crypto-watch.png"
+			fileName="crypto-watcher.png"
 			title="Crypto Watch"
 			link="https://tender-bose-c576c3.netlify.app"
 			text="A simple crypto currency price tracker, using Coinbase Pro's Web Hooks API to update prices in real time."
@@ -10,7 +10,7 @@
 		>
 		</FlipCard>
 		<FlipCard
-				fileName="portfolio-dark.png"
+				fileName="portfolio.png"
 				title="Portfolio"
 				link="https://namidev.xyz"
 				text="My personal portfolio (this) website."

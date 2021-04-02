@@ -66,6 +66,7 @@ export default {
 		border-radius: 20px;
 
 		img {
+			width: 100%;
 			align-self: flex-start;
 		}
 
@@ -79,11 +80,6 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-
-		img {
-			height: 70%;
-		}
-
 
 		.see-more {
 			align-self: flex-end;
@@ -119,10 +115,6 @@ export default {
 			padding: 5px;
 			border-radius: 8px;
 			margin: 5px 10px;
-		}
-
-		img {
-			height: 50%;
 		}
 
 		a, a:active, a:visited {
