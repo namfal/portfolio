@@ -39,7 +39,7 @@ export default {
 <style scoped lang="less">
 	.scene {
 		width: 350px;
-		height: 400px;
+		height: 350px;
 		perspective: 600px;
 		padding: 50px;
 	}
@@ -138,6 +138,13 @@ export default {
 				background-color: black;
 				color: white;
 			}
+		}
+	}
+
+	@media screen and (min-width: 1000px){
+		.scene {
+			width: 550px;
+			height: 450px;
 		}
 	}
 </style>
