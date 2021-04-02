@@ -55,7 +55,6 @@ export default {
 
 	.card.flipped {
 		transform: rotateY(180deg);
-		overflow: unset;
 	}
 
 	.front, .back {
@@ -64,6 +63,7 @@ export default {
 		height: 100%;
 		backface-visibility: hidden;
 		border-radius: 20px;
+		overflow: scroll;
 
 		img {
 			width: 100%;
@@ -76,7 +76,6 @@ export default {
 	}
 
 	.front {
-		overflow: hidden;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
@@ -102,7 +101,6 @@ export default {
 
 	.back {
 		transform: rotateY(180deg);
-		overflow: scroll;
 
 		p, button, a {
 			margin: 10px;
