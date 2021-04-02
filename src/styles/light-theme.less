@@ -106,11 +106,19 @@
 #app.light .container-projects .card {
 	background: @sea-green;
 	box-shadow: 5px 5px 10px 0 fade(@midnight, 30);
-	color: @onahau;
+	color: @midnight;
 
 	&:hover {
 		box-shadow: 5px 5px 10px 5px fade(@midnight, 30);
 	}
+}
+
+#app.light .card .front {
+	background: @turquoise;
+}
+
+#app.light .card .back {
+	background: @sea-green;
 }
 
 @supports (-moz-appearance:none) {
