@@ -9,6 +9,15 @@
 			github="https://github.com/namfal/cryptocurrency-watch"
 		>
 		</FlipCard>
+		<FlipCard
+				fileName="portfolio-dark.png"
+				title="Portfolio"
+				link="https://namidev.xyz"
+				text="My personal portfolio (this) website."
+				techStack="Vue.JS App"
+				github="https://github.com/namfal/portfolio"
+		>
+		</FlipCard>
 	</div>
 </template>
 
