@@ -1,3 +1,3 @@
 # Portfolio (Work in Progress)
 
-This is the code for my portfolio. Not much to see yet so pls move along...
+This is the code for my portfolio website. You can see it in action [here](https://namidev.xyz/)
