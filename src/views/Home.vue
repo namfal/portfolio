@@ -3,7 +3,7 @@
 		<Canvas :animation="animationPaused" :darkTheme="darkTheme"></Canvas>
 		<img class="pic" src="../assets/nami.jpeg" alt="Picture of me">
 		<p class="text">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Hi 👋 I am Nami and I am a Frontend Developer 👨‍💻 When I was a toddler, I took apart my parents’ bedside lamp and was tinkering with it. My questionable choice for toys aside, I was born to take things apart and put them back together - and yes, failed attempts count too! Now, I tinker with web apps instead and my main tool is JS. I love developing with React and Vue, and working with small teams!
 		</p>
 		</div>
 </template>
